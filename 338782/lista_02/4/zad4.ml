@@ -13,6 +13,6 @@ let rec halve = function
 
 let rec mergesort merge cmp = function
     | [] -> []
-    | x::[] -> x
+    | [x] -> [x]
     | xs -> let (x,y) = halve xs in merge cmp (mergesort merge cmp x) (mergesort merge cmp y)
 
