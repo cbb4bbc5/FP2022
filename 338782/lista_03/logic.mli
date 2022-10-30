@@ -56,5 +56,3 @@ val imp_e : theorem -> theorem -> theorem
 val bot_e : formula -> theorem -> theorem
 
 
-val pqrpqpr : theorem 
-val p_ppp__p : theorem

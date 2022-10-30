@@ -75,29 +75,3 @@ let bot_e f (ass,conc) =
   | _ -> failwith "Nieprawda"
   
   
-
-let fp = Var "p"
-let fq = Var "q"
-let fr = Var "r"
-let fpq = Imp (fp,fq)
-let fpqr = Imp(fp,Imp(fq,fr))
-let fpr = Imp(fp,fr)
-
-let p = by_assumption fp
-let pp = imp_i fp p
-
-let pqp = imp_i fp (imp_i fq p)
-
-let pqrpqpr = imp_e (imp_e (by_assumption fpqr) p) (imp_e (by_assumption fpq) p) |> imp_i fp |> imp_i fpq |> imp_i fpqr 
-
-let b_p = by_assumption Bot |> bot_e fp |> imp_i Bot 
-
-
-
-let fp__ = (Imp(Imp(fp,Bot),Bot))
-let p__ = by_assumption fp__
-let fp_ = (Imp(fp,Bot))
-let p_p = by_assumption fp_ |> imp_e p__ |> bot_e fp |> imp_i fp_
-let fp_pp = (Imp(Imp(Imp(fp,Bot),fp),fp))
-let p_pp = by_assumption fp_pp
-let p_ppp__p = imp_e p_pp p_p |> imp_i fp__ |> imp_i fp_pp
