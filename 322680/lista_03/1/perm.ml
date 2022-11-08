@@ -33,12 +33,12 @@ module Make(Key : OrderedType) = struct
   type key = Key.t
   type t = {
     perm : Key.t MyMap.t;
-    inv : Key.t MyMap.t
+    inv  : Key.t MyMap.t
   }
 
   let apply t key =
     match MyMap.find_opt key t.perm with
-    | None -> key
+    | None   -> key
     | Some v -> v
 
   let id = { perm = MyMap.empty; inv = MyMap.empty }
@@ -55,22 +55,21 @@ module Make(Key : OrderedType) = struct
     let non_id k v = Key.compare k v != 0
     in {
       perm = MyMap.map (apply m) n.perm |> MyMap.filter non_id;
-      inv = MyMap.map (apply (invert n)) m.inv |> MyMap.filter non_id
+      inv  = MyMap.map (apply (invert n)) m.inv |> MyMap.filter non_id
     }
 
   let compose m n =
     let wtf key opt_nv opt_mv =
       match opt_nv, opt_mv with
       | None, opt_mv -> opt_mv
-      | Some nv, _ -> begin
-        match MyMap.find_opt nv m.perm with
-        | None -> Some nv
-        | Some mnv when Key.compare key mnv = 0 -> None
-        | Some mnv -> Some mnv
+      | Some nv, _   -> begin
+        match apply m nv with
+        | mnv when mnv = key -> None
+        | mnv -> Some mnv
         end
     in {
       perm = MyMap.merge wtf n.perm m.perm;
-      inv = MyMap.merge wtf m.inv n.inv
+      inv  = MyMap.merge wtf m.inv  n.inv
     }
 
   let compare m n = MyMap.compare Key.compare m.perm n.perm
