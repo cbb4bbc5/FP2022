@@ -1,4 +1,7 @@
 # FP2022
+## Link do Hack.md
+https://hackmd.io/ubxCRB5UROqu1ZCUn5vYCw
+
 ## Jak wyglada deklaracja?
 - Klonujemy repozytorium (jesli jeszcze tego nie zrobiliśmy)
 - Tworzymy nowego brancha np `git checkout -b 666666/lista_02`
