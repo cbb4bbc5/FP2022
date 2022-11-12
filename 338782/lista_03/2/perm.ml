@@ -33,9 +33,9 @@ module Make(Key : OrderedType) =
         let apply (m,_) x = match Maps.find_opt x m with
             | None -> x
             | Some x -> x
-        let swap a b = let x = Maps.empty |> Maps.add a b |> Maps.add b a in (x,x)
+        let swap a b = let x = if Key.compare a b = 0 then fst id else Maps.empty |> Maps.add a b |> Maps.add b a in (x,x)
         let union k a b = 
-            if b = k 
+            if Key.compare b k = 0 
             then None
             else Some b 
         let compose f g = (fst f |> Maps.map (apply g) |> Maps.union union (fst g),snd g |> Maps.map (apply (invert f)) |> Maps.union union (snd f))
