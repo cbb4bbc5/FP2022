@@ -61,12 +61,11 @@ let by_assumption f =
 
 let imp_i f (ass,conc) = Assumptions.remove f ass , Imp(f,conc)
 
-
 let imp_e (ass1,conc1) (ass2,conc2) =
   match conc1 with
   | Bot | Var _ -> failwith "Zla regula"
   | Imp(a,b) -> 
-      if Formulas.compare a conc2 = 0
+      if a = conc2
       then Assumptions.union ass1 ass2, b
       else failwith "Nieprawda"
 
