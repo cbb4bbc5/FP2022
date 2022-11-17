@@ -39,4 +39,8 @@ let rec bpop : 'a. 'a blist -> 'a * 'a blist =
     | Two(x,y,xs) -> (x,One(y,xs))
 
 let btl xs = let (_,xs) = bpop xs in xs
-let bhd = bnth 0
+let bhd xs = bnth 0 xs
+
+let rec of_list = function
+    | [] -> Nil
+    | x::xs -> bcons x (of_list xs)
