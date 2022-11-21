@@ -13,6 +13,7 @@ type formula =
 
 val pp_print_formula : Format.formatter -> formula -> unit
 
+val formula_of_string : string -> formula
 (** reprezentacja twierdzeń *)
 type theorem
 
