@@ -9,6 +9,31 @@ let rec string_of_formula = function
   | Imp ((Imp _) as a,b) -> "("^string_of_formula a^") -> "^string_of_formula b
   | Imp (a,b) -> string_of_formula a^" -> "^string_of_formula b
 
+let formula_of_string s =
+  let rec imp i n = 
+    match s.[i] with
+      | '-' when n = 0 && s.[i+1] = '>' -> i
+      | '(' -> imp (i+1) (n+1)
+      | ')' -> imp (i+1) (n-1)
+      | _ -> imp (i+1) n
+  in
+  let match_char = function
+    | '_' -> Bot
+    | c -> Var (String.make 1 c)
+  in
+  let rec sub b e =
+    match e-b with
+    | 1 -> match_char s.[b]
+    | 2 -> match_char begin match s.[b] with
+                            | ' ' -> s.[b+1]
+                            | x -> x
+                      end
+    | 3 -> match_char s.[b+1]
+    | _ -> let i = imp b 0 in let i2 = match s.[i+2] with ' ' -> i+3 | _ -> i+2 in
+    match s.[b] with 
+      | '(' -> Imp(sub (b+1) (i-1),sub (i2) e)
+      | _ -> Imp(sub b i,sub (i2) e)
+  in sub 0 (String.length s)
 module Formulas =
   struct
     type t = formula
