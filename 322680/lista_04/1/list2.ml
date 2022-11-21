@@ -1,12 +1,10 @@
 type 'a list2 =
 | Nil
 | Zero of             ('a * 'a) list2
-| One  of        'a * ('a * 'a) list2
+| One  of       'a  * ('a * 'a) list2
 | Two  of ('a * 'a) * ('a * 'a) list2
 
 let empty = Nil
-
-(* TODO: pretty-printer list2 *)
 
 let rec cons : 'a. 'a -> 'a list2 -> 'a list2 =
   fun x xs ->
@@ -29,8 +27,7 @@ let rec hdtl : 'a. 'a list2 -> ('a * 'a list2) option =
   | Two((x, y), xs) -> Some (x, One(y, xs))
 
 let hd : 'a. 'a list2 -> 'a option =
-  fun xs ->
-  match hdtl xs with
+  fun xs -> match hdtl xs with
   | None -> None
   | Some (hd, tl) -> Some hd
 
@@ -43,21 +40,21 @@ let tl : 'a. 'a list2 -> 'a list2 option =
 let rec nth : 'a. int -> 'a list2 -> 'a option =
   fun n xs ->
   match xs with
-  | Nil           -> None
+  | Nil -> None
   | Zero(xs) ->
     begin match nth (n / 2) xs with
-    | None        -> None
+    | None -> None
     | Some (x, y) ->
       if n mod 2 = 0
-      then           Some x
-      else           Some y
+      then Some x
+      else Some y
     end
-  | One(x, _) when n = 0
-                  -> Some x
-  | One(_, xs)    -> nth (n - 1) (Zero(xs))
+  | One(x, _) when n = 0 -> Some x
+  | One(_, xs) -> nth (n - 1) (Zero(xs))
   | Two((x, y), xs) ->
     begin match n with
-    | 0           -> Some x
-    | 1           -> Some y
-    | n           -> nth (n - 2) (Zero(xs))
+    | 0 -> Some x
+    | 1 -> Some y
+    | n -> nth (n - 2) (Zero(xs))
     end
+
