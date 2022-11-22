@@ -1,6 +1,8 @@
 # FP2022
-## Link do Hack.md
-https://hackmd.io/ubxCRB5UROqu1ZCUn5vYCw
+## Linki do Hack.md
+- [lista 2](https://hackmd.io/n3PDESuQRqerXNGPm6ZEuQ)
+- [lista 3](https://hackmd.io/ubxCRB5UROqu1ZCUn5vYCw)
+- [lista 4](https://hackmd.io/WMlK86sRTZKdaoojgTHEcA)
 
 ## Jak wyglada deklaracja?
 - Klonujemy repozytorium (jesli jeszcze tego nie zrobiliśmy)
