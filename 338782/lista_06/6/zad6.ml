@@ -13,3 +13,10 @@ let rec sieve : ('a, 'a, int, int) proc =
   fun c -> recv (fun v -> send v (fun () -> (filter (fun x -> x mod v <> 0) >|> sieve) c))
 
 let primes = fun () -> run (nats_from 2 >|> sieve >|> map string_of_int)
+
+let rec stream_of_list : 'z -> 'a list -> ('z, 'z, 'i, 'a) proc =
+  fun z xs c -> match xs with
+  | [] -> c z
+  | x::xs -> send x (fun () -> stream_of_list z xs c)
+
+let filtr f xs = run (stream_of_list 0 xs >|> filter f >|> map string_of_int)
