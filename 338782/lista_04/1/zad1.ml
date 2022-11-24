@@ -41,6 +41,6 @@ let rec bpop : 'a. 'a blist -> 'a * 'a blist =
 let btl xs = let (_,xs) = bpop xs in xs
 let bhd xs = bnth 0 xs
 
-let rec of_list = function
+let rec bof_list = function
     | [] -> Nil
-    | x::xs -> bcons x (of_list xs)
+    | x::xs -> bcons x (bof_list xs)
