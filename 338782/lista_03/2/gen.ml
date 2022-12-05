@@ -29,3 +29,4 @@ let is_generated (type a) (module Elt : Perm.S with type t = a) x xs =
             then false
             else saturate xs1
     in saturate (Sets.of_list xs |> Sets.add Elt.id)
+    
