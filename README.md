@@ -4,6 +4,7 @@
 - [lista 3](https://hackmd.io/ubxCRB5UROqu1ZCUn5vYCw)
 - [lista 4](https://hackmd.io/WMlK86sRTZKdaoojgTHEcA)
 - [lista 5](https://hackmd.io/itbyQUFKSo68b1vOqdeseA)
+- [Lista6](https://hackmd.io/BzBNxwE_TZOUkU_E0EbWug)
 
 ## Link do spotkania 
 [Google Meet](https://meet.google.com/zse-gjvv-nin)
