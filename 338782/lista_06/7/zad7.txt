@@ -1,0 +1,3 @@
+kontynuacja
+send w nowy In z danego Out
+recv w nowy Out z danego In
