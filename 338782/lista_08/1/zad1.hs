@@ -1,5 +1,3 @@
-import GHC.IO.Handle (hGetChar)
-import System.Process.Internals (ProcRetHandles(hStdOutput))
 echoLower :: IO ()
 echoLower = do
     c <- getChar
