@@ -60,6 +60,10 @@ module StreamTrans where
             catchOutput' (Return (os,x)) o = Return (o:os,x)
             catchOutput' (ReadS f) o =     ReadS (\i -> catchOutput' (f i) o)
             catchOutput' s o = s
+    {-catchOutput (WriteS o st) = do
+        (os,a) <- catchOutput st
+        return (o:os,a)
+    -}
     catchOutput (Return x) = Return ([],x)
     catchOutput (ReadS f) = ReadS (catchOutput.f)
 
