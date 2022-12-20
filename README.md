@@ -6,6 +6,7 @@
 - [lista 5](https://hackmd.io/itbyQUFKSo68b1vOqdeseA)
 - [Lista6](https://hackmd.io/BzBNxwE_TZOUkU_E0EbWug)
 - [Lista 7](https://hackmd.io/_IVrUws1QRekAJEyCy9LCg)
+- [lista 8](https://hackmd.io/dcAvZXhiQJ6cnJGUj5ZXEQ)
 
 ## Link do spotkania 
 [Google Meet](https://meet.google.com/zse-gjvv-nin)
