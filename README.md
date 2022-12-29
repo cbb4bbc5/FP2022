@@ -48,6 +48,8 @@ Wasze branche powinny miec nazwe pasujaca do wzorca `<nr indeksu>/lista_<nr list
 + __Monad transformers!!!__ ultra wazny temat
     - [Haskell wiki](https://en.wikibooks.org/wiki/Haskell/Monad_transformers)
     - [Functional Programming Made Easier](https://libgen.li/edition.php?id=140734530)
++ Template Haskell czyli makra w haskellu
+    - [haskell wiki](https://wiki.haskell.org/Template_Haskell)
 + Elm programming language - krotki wstep do tego jezyka + omowienie jak obchodzimy "nieczyste" obliczenia w Elmie (Baardzo prosty temat)
 + Higher Kinds (bardzo ciekawy temat) jak zrobic "typy zalezne" w haskellu
     - Sandy Maguire - Thinking with Types
