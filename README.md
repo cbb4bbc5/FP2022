@@ -31,3 +31,30 @@
 ## Branch
 
 Wasze branche powinny miec nazwe pasujaca do wzorca `<nr indeksu>/lista_<nr listy>`
+
+## Prezentacja
+ ### Tematy dodatkowych prezentacji
+ + ~~Functor/Applicative/Monad~~ (MS)
+ + Monoid + other algebraic typeclasses (Purescript)
+    - [haskell wiki](https://en.wikibooks.org/wiki/Haskell/Monoids)
+    - [Functional Programming Made Easier](https://libgen.li/edition.php?id=140734530)
+ + Foldable/Traversable/Alternative
+    - [haskell wiki](https://en.wikibooks.org/wiki/Haskell/Foldable)
+    - [Functional Programming Made Easier](https://libgen.li/edition.php?id=140734530)
++ (TK) konstrukcje ADT
+    - wyklady/blog/ksiazka B.Milewskiego
+
++ (TK) Kleisli category
++ __Monad transformers!!!__ ultra wazny temat
+    - [Haskell wiki](https://en.wikibooks.org/wiki/Haskell/Monad_transformers)
+    - [Functional Programming Made Easier](https://libgen.li/edition.php?id=140734530)
++ Elm programming language - krotki wstep do tego jezyka + omowienie jak obchodzimy "nieczyste" obliczenia w Elmie (Baardzo prosty temat)
++ Higher Kinds (bardzo ciekawy temat) jak zrobic "typy zalezne" w haskellu
+    - Sandy Maguire - Thinking with Types
++ Typy egzystencjalne 
++ Strzalki (arrows)
+    - [paper](http://www.cse.chalmers.se/~rjmh/afp-arrows.pdf)
++ Freer Monad alternatywa do transformatorow monad
+    - [okmij](https://okmij.org/ftp/Haskell/extensible/)
+    - [okmij paper](https://okmij.org/ftp/Haskell/extensible/more.pdf)
++ Soczewki i inne optyki (Lens) - Raczej trudny temat
