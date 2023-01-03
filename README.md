@@ -35,10 +35,10 @@ Wasze branche powinny miec nazwe pasujaca do wzorca `<nr indeksu>/lista_<nr list
 ## Prezentacja
  ### Tematy dodatkowych prezentacji
  + ~~Functor/Applicative/Monad~~ (MS)
- + Monoid + other algebraic typeclasses (Purescript)
+ + ~~Monoid + other algebraic typeclasses (Purescript)~~ (DB)
     - [haskell wiki](https://en.wikibooks.org/wiki/Haskell/Monoids)
     - [Functional Programming Made Easier](https://libgen.li/edition.php?id=140734530)
- + Foldable/Traversable/Alternative
+ + ~~Foldable/Traversable/Alternative~~ (MM)
     - [haskell wiki](https://en.wikibooks.org/wiki/Haskell/Foldable)
     - [Functional Programming Made Easier](https://libgen.li/edition.php?id=140734530)
 + (TK) konstrukcje ADT
@@ -50,8 +50,8 @@ Wasze branche powinny miec nazwe pasujaca do wzorca `<nr indeksu>/lista_<nr list
     - [Functional Programming Made Easier](https://libgen.li/edition.php?id=140734530)
 + Template Haskell czyli makra w haskellu
     - [haskell wiki](https://wiki.haskell.org/Template_Haskell)
-+ Elm programming language - krotki wstep do tego jezyka + omowienie jak obchodzimy "nieczyste" obliczenia w Elmie (Baardzo prosty temat)
-+ Higher Kinds (bardzo ciekawy temat) jak zrobic "typy zalezne" w haskellu
++ ~~Elm programming language - krotki wstep do tego jezyka + omowienie jak obchodzimy "nieczyste" obliczenia w Elmie~~ (DB)
++ ~~Higher Kinds (bardzo ciekawy temat) jak zrobic "typy zalezne" w haskellu~~ (KG)
     - Sandy Maguire - Thinking with Types
 + Typy egzystencjalne 
 + Strzalki (arrows)
