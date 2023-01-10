@@ -45,7 +45,7 @@ Wasze branche powinny miec nazwe pasujaca do wzorca `<nr indeksu>/lista_<nr list
     - wyklady/blog/ksiazka B.Milewskiego
 
 + (TK) Kleisli category
-+ __Monad transformers!!!__ ultra wazny temat
++ ~~__Monad transformers!!!__~~ ultra wazny temat (MW)
     - [Haskell wiki](https://en.wikibooks.org/wiki/Haskell/Monad_transformers)
     - [Functional Programming Made Easier](https://libgen.li/edition.php?id=140734530)
 + Template Haskell czyli makra w haskellu
@@ -53,8 +53,8 @@ Wasze branche powinny miec nazwe pasujaca do wzorca `<nr indeksu>/lista_<nr list
 + ~~Elm programming language - krotki wstep do tego jezyka + omowienie jak obchodzimy "nieczyste" obliczenia w Elmie~~ (DB)
 + ~~Higher Kinds (bardzo ciekawy temat) jak zrobic "typy zalezne" w haskellu~~ (KG)
     - Sandy Maguire - Thinking with Types
-+ Typy egzystencjalne 
-+ Strzalki (arrows)
++ ~~Typy egzystencjalne~~ (KJ)
++ ~~Strzalki (arrows)~~ (JP)
     - [paper](http://www.cse.chalmers.se/~rjmh/afp-arrows.pdf)
 + Freer Monad alternatywa do transformatorow monad
     - [okmij](https://okmij.org/ftp/Haskell/extensible/)
