@@ -3,7 +3,7 @@
 Jakub Popiel, nr indeksu: 323236
 
 ### Pomysł 1
-Parser imperatywnego języka będącego uproszczoną formą C.
+Interpreter imperatywnego języka będącego uproszczoną formą C.
 
 Język: Ocaml
 
