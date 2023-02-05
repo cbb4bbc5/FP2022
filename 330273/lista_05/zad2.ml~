@@ -1,0 +1,6 @@
+type 'a recc = In of ('a recc -> 'a)
+let out (In x) = x
+
+let fix f = (fun x a -> f (out x x) a) (In (fun x a -> f (out x x) a))
+
+
