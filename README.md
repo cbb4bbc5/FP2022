@@ -1,4 +1,5 @@
 # FP2022
+https://meet.jit.si/177339175221203
 
 ## Punktacja
 
