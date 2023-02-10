@@ -1,0 +1,70 @@
+/home/marek/.ghcup/ghc/9.4.4/lib/ghc-9.4.4/lib/x86_64-linux-ghc-9.4.4/libHSarray-0.5.4.0-ghc9.4.4.so:
+  hash: e24179a78c27e1cc137dc781765f31039e782168fa7f96fbafc55161b9de18be
+/home/marek/.ghcup/ghc/9.4.4/lib/ghc-9.4.4/lib/x86_64-linux-ghc-9.4.4/libHSbase-4.17.0.0-ghc9.4.4.so:
+  hash: 1e86ab88c9752a69ae9fa9cabcb9cade1636affdbb0d5ece3f688b2e5f2bba93
+/home/marek/.ghcup/ghc/9.4.4/lib/ghc-9.4.4/lib/x86_64-linux-ghc-9.4.4/libHScontainers-0.6.6-ghc9.4.4.so:
+  hash: 157dcf8579bf9e60d8a39e5d70e8d06b349fc9d8d3e40955b01f0107caface14
+/home/marek/.ghcup/ghc/9.4.4/lib/ghc-9.4.4/lib/x86_64-linux-ghc-9.4.4/libHSdeepseq-1.4.8.0-ghc9.4.4.so:
+  hash: 27177092f84bdf2d6f78749520c336ef4410b2f70c421bc29d6251ac6128a965
+/home/marek/.ghcup/ghc/9.4.4/lib/ghc-9.4.4/lib/x86_64-linux-ghc-9.4.4/libHSghc-bignum-1.3-ghc9.4.4.so:
+  hash: 315aba437072dd3516e14a9f1b4b65f3f33fffb47394f923ea1109db8d17c869
+/home/marek/.ghcup/ghc/9.4.4/lib/ghc-9.4.4/lib/x86_64-linux-ghc-9.4.4/libHSghc-boot-th-9.4.4-ghc9.4.4.so:
+  hash: 54f4a63d0c19d2f44ae1f64a4fba35f33bb13dd9cc49b56006e3691d74d5c426
+/home/marek/.ghcup/ghc/9.4.4/lib/ghc-9.4.4/lib/x86_64-linux-ghc-9.4.4/libHSghc-prim-0.9.0-ghc9.4.4.so:
+  hash: d6c11891966baf6b7c6e645e6553a018cf02b496bcc06b89c3e6724df300d60f
+/home/marek/.ghcup/ghc/9.4.4/lib/ghc-9.4.4/lib/x86_64-linux-ghc-9.4.4/libHSpretty-1.1.3.6-ghc9.4.4.so:
+  hash: 37c5452244db88d90d95e30e928f704b90bd8315e05e41d0708f0d03f8d65f53
+/home/marek/.ghcup/ghc/9.4.4/lib/ghc-9.4.4/lib/x86_64-linux-ghc-9.4.4/libHStemplate-haskell-2.19.0.0-ghc9.4.4.so:
+  hash: 5489a0ad178720568578c769290d87a4e18a07ab5e6dd35415cb0eed6be938e3
+/home/marek/.ghcup/ghc/9.4.4/lib/ghc-9.4.4/lib/x86_64-linux-ghc-9.4.4/rts-1.0.2/include/ghcversion.h:
+  hash: 7cd1c735788d6d249ae840b9c75dbd746a97cc6c423a22a9da086a07b052d674
+? /home/marek/.stack/snapshots/x86_64-linux/0ef0ce5e46256bd7c7e39b37d8c7cb5f590afab72e30469b1370f6d24088e886/9.4.4/lib/x86_64-linux-ghc-9.4.4/libHSmtl-2.3.1-3mMMM2qn6KzCq4orwa0moh-ghc9.4.4.so
+: hash: e4ee1c3dfef8cd27c11e8097407cb28ab4d06e4885599bc22c14dd519c9f70f3
+? /home/marek/.stack/snapshots/x86_64-linux/0ef0ce5e46256bd7c7e39b37d8c7cb5f590afab72e30469b1370f6d24088e886/9.4.4/lib/x86_64-linux-ghc-9.4.4/libHStransformers-0.6.0.6-FCbQ3YO2yYgH4T3zYOCwDD-ghc9.4.4.so
+: hash: 28fa29d4a8b2bebebbc582318bef51b45dfde860c91f8573d2bbd219b091d452
+/home/marek/prog/FP2022/338782/projekt/.stack-work/dist/x86_64-linux/Cabal-3.8.1.0/build/Axiom.dyn_o:
+  hash: c8da31833915ce79e66c8b3322077d295319b4d3998c5b2c1bc83776c03ea763
+/home/marek/prog/FP2022/338782/projekt/.stack-work/dist/x86_64-linux/Cabal-3.8.1.0/build/Formula.dyn_o:
+  hash: 4fe3a32bef0a3f928f245b61ec2d7900050dca05164ebbcb8b8dca49621e012b
+/home/marek/prog/FP2022/338782/projekt/.stack-work/dist/x86_64-linux/Cabal-3.8.1.0/build/Logic.dyn_o:
+  hash: bde7461ec4304e26f176c6e4bbe6ec0375d89025e202d2e87e194d62a1e08a9d
+/home/marek/prog/FP2022/338782/projekt/.stack-work/dist/x86_64-linux/Cabal-3.8.1.0/build/Monads.dyn_o:
+  hash: d8af6daa2330a0df2f5d6a7ed0e2831e98140448aa280c917697c3da615b4a2b
+/home/marek/prog/FP2022/338782/projekt/.stack-work/dist/x86_64-linux/Cabal-3.8.1.0/build/Proof.dyn_o:
+  hash: d04c1cccbc4c93825a8460c96022c9125ff64b99b9e8e1e962c07d7c34b85a06
+/home/marek/prog/FP2022/338782/projekt/.stack-work/dist/x86_64-linux/Cabal-3.8.1.0/build/autogen/Paths_asystent.hs:
+  hash: 878a8e7f3529704a1d30060890e6ec13df99ce83d9b1733023785033977c67dc
+/home/marek/prog/FP2022/338782/projekt/.stack-work/dist/x86_64-linux/Cabal-3.8.1.0/build/autogen/cabal_macros.h:
+  hash: ab57ca153271865ed0d1e08b305bdafc0323f9fabf5d7dc6ccf215743490bdea
+/home/marek/prog/FP2022/338782/projekt/CHANGELOG.md:
+  hash: 81a1195afb0f56385480f7f1207be8bfd0dbf1f70d1b8179774be54840342f7c
+/home/marek/prog/FP2022/338782/projekt/README.md:
+  hash: 027e6041389db52b53193cdf8aeea905064db2c3601746921cbc966aa8b7b97f
+/home/marek/prog/FP2022/338782/projekt/asystent.cabal:
+  hash: c227b36db77289174d816138d393a24418b2428bdda085ecec687ac4c7606c58
+/home/marek/prog/FP2022/338782/projekt/package.yaml:
+  hash: d3fc0167df919cdf8552362adba854b067110a63015ae77ce605d681fad9422c
+/home/marek/prog/FP2022/338782/projekt/src/Axiom.hs:
+  hash: 4c6dbad9847211b330920b2d6bc761413c7f1714295880fa2f23180a18218e4f
+/home/marek/prog/FP2022/338782/projekt/src/Formula.hs:
+  hash: 5f91be877d630415a5ef8a1d2762bb2062babf7a7a476022e5a694b79aa61211
+/home/marek/prog/FP2022/338782/projekt/src/Interface.hs:
+  hash: 3a92a189150906fcf221423273b98ec9ded3650b6f5a5fd9716c8d5ab57411a9
+/home/marek/prog/FP2022/338782/projekt/src/Klasyczna.hs:
+  hash: e3fad5b4558bb50ea85f6533b5d1257c1096dd92f048420bf04dd8ebcff5e0c9
+/home/marek/prog/FP2022/338782/projekt/src/Lib.hs:
+  hash: 0e4630526519a9fe2162b25f02826a95445354f43522b7643954f7fa00df73d2
+/home/marek/prog/FP2022/338782/projekt/src/Logic.hs:
+  hash: 006af3b94c93a42451f73ea065472fbe36ff92f3c422d97e7663af89b5b78dcb
+/home/marek/prog/FP2022/338782/projekt/src/Monads.hs:
+  hash: 040936f1bab4bc028fb77fa8d3750f5b85b77978630d8b27ef1b9798049aacf7
+/home/marek/prog/FP2022/338782/projekt/src/Peano.hs:
+  hash: 792a640dfa0d25c059155aca3a2a45eeaaa6515de43b6f96e8fb66e37d38516d
+/home/marek/prog/FP2022/338782/projekt/src/Proof.hs:
+  hash: ef447ea9b6567443f3828b6a37195d08b3c3cb4fe7efba9ccfad471ec58049ab
+/home/marek/prog/FP2022/338782/projekt/src/UsingAxioms.hs:
+  hash: 1ee56f3ba63738d3247716082fe6cb3f6309dfb06cbf8c5d3216c2561fc05328
+/home/marek/prog/FP2022/338782/projekt/src/ZFC.hs:
+  hash: f3cfe93726f7d7e812deec95dbeb6a3be6f169224db0d5fb4473cf17c230b38a
+/usr/include/stdc-predef.h:
+  hash: cb08cd5d4cc059a90833ac48a284d25016e8d56ded8ad4cd98d8ac59cc5053f3

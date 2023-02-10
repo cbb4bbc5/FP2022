@@ -1,0 +1,5 @@
+
+proof neg "R -> ~~R"
+get get
+app b
+save dnegI

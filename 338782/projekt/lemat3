@@ -1,0 +1,17 @@
+proof l1 "Ax.Ay.x=y->y=x"
+gets gets
+apply EqElim "x" "x=a" foralls  "a" "b"
+apply EqRefl
+proof l3 "An.Am.(n+S(m))=S(n+m)"
+gets
+app Induction "a" l3
+app EqElim "x" "(0+S(b))=S(x)" for "b" "0+b"
+app l1 for "0+b" "b"
+app PlusZ
+app PlusZ
+get gets
+app EqElim "x" "(S(a)+S(b))=S(x)" for "S(a+b)" "S(a)+b"
+app l1 for "S(a) + b" "S(a+b)"
+app PlusS
+app EqElim "x" "(S(a) + S(b)) = S(x)" for "a+S(b)" "S(a+b)"
+app PlusS

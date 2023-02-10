@@ -1,0 +1,14 @@
+
+proof ea "(Ex.R(x) -> _) -> (Ax. R(x)) -> _"
+gets
+app a
+app c
+app b
+
+proof ea1 "~(Ex.R(x)) -> ~Ax. R(x)"
+get get
+app a
+get "a"
+app b
+save white
+

@@ -53,7 +53,6 @@ module StreamTrans where
 
     -- zadanie 6
 
-
     catchOutput :: StreamTrans i o a -> StreamTrans i b ([o],a)
     catchOutput (WriteS o st) = catchOutput' (catchOutput st) o
         where
@@ -132,6 +131,6 @@ module StreamTrans where
         m1 <*> m2 =  do{ x1 <- m1; x2 <- m2; return (x1 x2)}
     instance Monad (StreamTrans i o) where
         return = Return
-        (Return a) >>= f = f a
-        (ReadS f0) >>= f = ReadS (f0 >=> f)
-        (WriteS o st) >>= f = WriteS o (st >>= f)
+        Return a >>= f = f a
+        ReadS f0 >>= f = ReadS (f0 >=> f)
+        WriteS o st >>= f = WriteS o (st >>= f)

@@ -1,0 +1,9 @@
+
+proof l1 "Ax.Ay.x=y->y=x"
+gets gets
+apply EqElim \
+"x" "x=a" \
+for \
+ "a" "b"
+apply EqRefl
+save lemat1

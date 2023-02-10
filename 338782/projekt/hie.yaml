@@ -1,0 +1,13 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "asystent:lib"
+
+    - path: "./app/Main.hs"
+      component: "asystent:exe:asystent-exe"
+
+    - path: "./app/Paths_asystent.hs"
+      component: "asystent:exe:asystent-exe"
+
+    - path: "./test"
+      component: "asystent:test:asystent-test"
