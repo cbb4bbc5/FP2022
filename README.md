@@ -54,6 +54,7 @@ Wasze branche powinny miec nazwe pasujaca do wzorca `<nr indeksu>/lista_<nr list
 + ~~Elm programming language - krotki wstep do tego jezyka + omowienie jak obchodzimy "nieczyste" obliczenia w Elmie~~ (DB)
 + ~~Higher Kinds (bardzo ciekawy temat) jak zrobic "typy zalezne" w haskellu~~ (KG)
     - Sandy Maguire - Thinking with Types
+    - [Hackmd](https://hackmd.io/45lria3TSXC7yb3HmN9CVQ)
 + ~~Typy egzystencjalne~~ (KJ)
 + ~~Strzalki (arrows)~~ (JP)
     - [paper](http://www.cse.chalmers.se/~rjmh/afp-arrows.pdf)
