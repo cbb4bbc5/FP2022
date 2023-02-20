@@ -1,0 +1,108 @@
+effect ST X = 
+    { get : Unit => X 
+    ; put : X => Unit
+    }
+
+data rec FreeST X E A =
+| Return of A
+| Get of (X ->[E] FreeST X E A)
+| Put of X, (Unit ->[E] FreeST X E A)
+
+let hState st c =
+handle c () with
+| return x => fn _ => x
+| put st => fn _ => resume () st
+| get () => fn st => resume st st
+end st
+
+let hFreeST e =
+handle e () with
+| return x => Return x
+| get () => Get (fn st => resume st)
+| put st => Put st (fn () => resume ())
+end
+
+let d = handle 2 + get (put (get () - 40)) * 20 with hFreeST
+
+let rec miniRunInt md x =
+match md with
+| Return a => a
+| Get f => miniRunInt (f x) x
+| Put x f => miniRunInt (f ()) x
+end
+
+(* miniRunInt d 42 *)
+
+let rec runFreeST stMd =
+match stMd with
+| Return a => a
+| Get f => runFreeST (f (get ()))
+| Put x f => runFreeST (f (put x))
+end
+
+let md = Put 8 (fn () => Get (fn x => Put (x + 22) (fn () => Return (x + 20))))
+
+let runInt md st =
+handle printInt (runFreeST md) with hState st
+
+(* runInt md 42 *)
+
+effect Gen X = { yield : X => Unit }
+
+data Generator X =
+| Generator of (Unit ->[Gen X] Unit)
+
+let iter f (Generator gen) =
+handle gen () with
+| return _ => ()
+| yield x => resume (f x)
+end
+
+let toList (Generator gen) =
+handle gen () with
+| return _ => []
+| yield x => x :: resume ()
+end
+
+let take n (Generator gen) =
+handle gen () with
+| return _ => fn _ => []
+| yield x  => fn n =>
+    if n > 0
+    then x :: resume () (n - 1)
+    else []
+end n
+
+let hello = Generator (fn () => yield "Hello"; yield " "; yield "World"; yield "!\n")
+let naturals = Generator (fn () => 
+    let rec inf n = (
+        yield n; 
+        inf (n + 1)
+    ) in inf 0
+)
+let div a b =
+    let rec div_rec n k =
+        if n >= b then div_rec (n - b) (k + 1)
+        else (k, n)
+    in div_rec a 0
+let collatz n = Generator (fn () =>
+    let rec engine n = 
+        yield n;
+        let (k, r) = div n 2
+        in if r = 0 then engine k
+        elif n > 1 then engine (3 * n + 1)
+    in engine n
+)
+let kakutani n = Generator (fn () =>
+    let rec engine n = 
+        yield n;
+        let (k, r) = div n 2
+        in if r = 0 then engine k
+        else engine (3 * n + 1)
+    in engine n
+)
+(*
+iter printStr hello
+toList (collatz 27)
+take 42 (kakutani 15)
+*)

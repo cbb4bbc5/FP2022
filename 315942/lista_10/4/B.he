@@ -1,0 +1,129 @@
+effect Reader X =
+  { ask : Unit => Option X
+  }
+
+let hReadString str c =
+  handle c () with
+  | ask () => fn pos =>
+    if pos >= String.length str then
+      resume None pos
+    else
+      resume (Some (String.get pos str)) (pos+1)
+  | return  x => fn _ => x
+  end 0
+
+data rec BF =
+| MoveR
+| MoveL
+| Inc
+| Dec
+| Output
+| Input
+| While of List BF
+
+(* Right | Left | Increment | Decrement *)
+data Modifier = R | L | I | D
+
+effect Instruction X =
+  { read : X => X
+  ; write : X => X
+  ; tape : Modifier, X => X
+  }
+
+let parse str =
+  let rec parse () =
+    match ask () with
+    | None   => []
+    | Some c =>
+      if   Char.equal c '>' then MoveR  :: parse ()
+      elif Char.equal c '<' then MoveL  :: parse ()
+      elif Char.equal c '+' then Inc    :: parse ()
+      elif Char.equal c '-' then Dec    :: parse ()
+      elif Char.equal c '.' then Output :: parse ()
+      elif Char.equal c ',' then Input  :: parse ()
+      elif Char.equal c '[' then
+        begin let body = parse () in
+          While body :: parse ()
+        end
+      elif Char.equal c ']' then []
+      else parse ()
+    end
+  in
+  handle parse () with hReadString str
+
+(** Odczytanie pojedynczego znaku ze standardowego wejscia *)
+let tryReadChar () =
+  let str = input stdin 1 in
+  if String.length str = 1 then
+    Some (String.get 0 str)
+  else None
+
+(** Wypisanie pojedynczego znaku na standardowe wyjscie *)
+let printChar c =
+  outputString stdout (String.repeat 1 c)
+
+(* Do konwersji pomiedzy typami Char i Int mozesz uzyc funkcji
+* Char.chr oraz Char.code *)
+open Char
+
+let sep lst =
+  match lst with
+  | x :: xs => (x, xs)
+  | [] => (0, [])
+  end
+
+let ptr tp = fst (sep (fst tp))
+
+(* tasma to para list intow (zipper) *)
+(* pierwszy element pierwszej listy to wskaznik (ptr tp) *)
+(* program nie broni przed wyjsciem poza tasme *)
+
+let brainHandler ins =
+  handle ins () with
+  | tape mod tp =>
+    let (p, xs) = sep (fst tp)
+    in let (q, ys) = sep (snd tp)
+    in match mod with
+    | R => resume (xs, p :: q :: ys)
+    | L => resume (q :: p :: xs, ys)
+    | I => resume ((p + 1) :: xs, q :: ys)
+    | D => resume ((p - 1) :: xs, q :: ys)
+    end
+  | read tp => 
+    match tryReadChar () with
+    | Some c => 
+      let (p, xs) = sep (fst tp)
+      in resume (code c :: xs, snd tp)
+    | None => resume tp
+    end
+  | write tp => 
+    let p = fst (sep (fst tp))
+    in printChar (chr p); resume tp
+  end
+
+let rec eval exp tp =
+  match exp with
+  | [] => printStr "\n"
+  | MoveR :: expr => eval expr (tape R tp)
+  | MoveL :: expr => eval expr (tape L tp)
+  | Inc :: expr => eval expr (tape I tp)
+  | Dec :: expr => eval expr (tape D tp)
+  | Output :: expr => eval expr (write tp)
+  | Input :: expr => eval expr (read tp)
+  | While loop :: expr => 
+    if ptr tp > 0 then eval (loop @ exp) tp else eval expr tp
+  end
+
+(* tasma na 5 liczb wypelniona zerami *)
+let tp = ([0], [0, 0, 0, 0])
+
+(* program testowy *)
+let i = parse "++++[.-].,.,.,."
+
+(* hello world *)
+let hello = parse ">++++++++[<+++++++++>-]<.>++++[<+++++++>-]<+.+++++++..++
++.>>++++++[<+++++++>-]<++.------------.>++++++[<+++++++++>-]<+.<.+++.------
+.--------.>>>++++[<++++++++>-]<+."
+
+(* (runEval expr) zewaluuje sparsowany kod na tasmie tp *)
+let runEval expr = handle eval expr tp with brainHandler
