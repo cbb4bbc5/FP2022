@@ -1,0 +1,15 @@
+proof dem "~(R & P) -> ~R | ~P"
+get
+app Klass dem
+get
+app a
+get
+app Klass dem
+get
+app b
+app c
+app Klass dem
+get
+app b
+app c
+save dem

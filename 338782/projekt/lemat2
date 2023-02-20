@@ -1,0 +1,7 @@
+proof l2 "An.(n+0)=n"
+get app Induction "a" l2
+app PlusZ
+get get
+app EqElim "x" "(S(a)+0)=S(x)" foralls "a+0" "a"
+apply PlusS
+save lemat2

@@ -1,0 +1,5 @@
+
+proof zr "Ex.x=0"
+get "0+0"
+app PlusZ
+save zero

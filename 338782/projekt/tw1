@@ -1,0 +1,43 @@
+load lemat2
+proof l2 "An.(n+0)=n"
+get app Induction "a" l2
+app PlusZ
+get get
+app EqElim "x" "(S(a)+0)=S(x)" foralls "a+0" "a"
+apply PlusS
+save lemat2
+load lemat3
+proof l1 "Ax.Ay.x=y->y=x"
+gets get
+apply EqElim "x" "x=a" foralls  "a" "b"
+apply EqRefl
+proof l3 "An.Am.(n+S(m))=S(n+m)"
+gets
+app Induction "a" l3
+app EqElim "x" "(0+S(b))=S(x)" for "b" "0+b"
+app l1 for "0+b" "b"
+app PlusZ
+app PlusZ
+get get
+app EqElim "x" "(S(a)+S(b))=S(x)" for "S(a+b)" "S(a)+b"
+app l1 for "S(a) + b" "S(a+b)"
+app PlusS
+app EqElim "x" "(S(a) + S(b)) = S(x)" for "a+S(b)" "S(a+b)"
+app PlusS
+proof tw1 "An.Am. (n+m)=m+n"
+gets app Induction "a" tw1
+app EqElim "x" "(0+m)=x" for "m" "m+0"
+app PlusZ
+app l1 for "b+0" "b"
+app l2
+app PlusZ
+get get
+app EqElim "x" "x=m+S(n)" for "S(n+m)" "S(n)+m"
+app l1 for "S(a) + b" "S(a+b)"
+app PlusS
+app EqElim "x" "S(x)=b+S(a)" for "b+a" "a+b"
+app l1 for "a+b" "b+a"
+app PlusS
+app l1 for "b+S(a)" "S(b+a)"
+app l3
+save tw1

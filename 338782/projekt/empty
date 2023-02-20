@@ -1,0 +1,7 @@
+
+proof empty "Ex.Ay.~y@x"
+app Inf
+app a andL
+get "b"
+app b
+save empty
